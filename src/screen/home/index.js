@@ -7,9 +7,9 @@ import {
 } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-import styles from './styles';
-import logo from '../../assets/logo.png';
 
+import logo from '../../assets/logo.png';
+import styles from './styles';
 import { validate } from '../../helper/storage';
 
 export default function Home() {

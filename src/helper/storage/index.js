@@ -17,6 +17,6 @@ export async function save(key, value) {
 
 export async function clear() {
     await AsyncStorage.clear()
-        .then(res => alert(`Dados limpo com sucesso.`))
+        .then(() => alert(`Dados limpo com sucesso.`))
         .catch(e => alert(e))
 }
