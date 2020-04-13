@@ -1,23 +1,47 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
     View,
-    Text
+    Text,
+    Image,
+    TouchableOpacity
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import styles from './styles';
+import logo from '../../assets/logo.png';
 
+import { validate } from '../../helper/storage';
 
-const Home = () => {
+export default function Home() {
+    const navigation = useNavigation();
+
+    async function validateUser() {
+        let user = `user`;
+        await validate(user)
+    }
+
+    async function createAccount() {
+        navigation.navigate('CreateUser');
+    }
+
+    useEffect(() => {
+        validateUser();
+    });
+
     return (
         <View style={styles.container}>
             <View style={styles.header}>
-                {/* <Image source={} /> */}
-                <Text style={styles.headerText}>
-                    Total de <Text style={styles.headerTextBold}>casos</Text>.
+                <Image source={logo} />
+                <Text style={styles.headerTxt}>
+                    <Text style={styles.headerTxtBold}>Olá, seja bem-vindo !</Text>
                 </Text>
+                <TouchableOpacity
+                    style={styles.btnAcessar}
+                    onPress={() => createAccount()}>
+                    <Text style={styles.txtAcessar}>Criar Conta
+                    </Text>
+                </TouchableOpacity>
             </View>
         </View>
     );
 };
-
-export default Home;

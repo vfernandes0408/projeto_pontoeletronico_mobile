@@ -1,6 +1,9 @@
 import {
     StyleSheet
 } from 'react-native';
+import {
+    TouchableWithoutFeedback
+} from 'react-native-gesture-handler';
 
 export default StyleSheet.create({
 
@@ -8,20 +11,21 @@ export default StyleSheet.create({
         flex: 1,
         paddingHorizontal: 20,
         paddingTop: 20,
+        backgroundColor: '#ffff'
     },
 
     header: {
-        flexDirection: 'row',
+        flexDirection: 'column',
         justifyContent: 'space-between',
         alignItems: 'center',
     },
 
-    headerText: {
+    headerTxt: {
         fontSize: 15,
         color: '#737380',
     },
 
-    headerTextBold: {
+    headerTxtBold: {
         fontWeight: 'bold',
     },
 
@@ -33,45 +37,26 @@ export default StyleSheet.create({
         fontWeight: 'bold',
     },
 
-    description: {
-        fontSize: 16,
-        lineHeight: 24,
-        color: '#737380',
-    },
-
-    incidentList: {
-        marginTop: 32,
-    },
-
-    incident: {
-        padding: 24,
-        borderRadius: 8,
-        backgroundColor: '#FFF',
-        marginBottom: 15,
-    },
-
-    incidentProperty: {
-        fontSize: 14,
-        color: '#41414d',
-        fontWeight: 'bold',
-    },
-
-    incidentValue: {
-        marginTop: 8,
-        fontSize: 15,
-        marginBottom: 24,
-        color: '#737380',
-    },
-
-    detailsButton: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
+    txtAcessar: {
         alignItems: 'center',
+        color: 'white',
+        flexDirection: 'column',
+        justifyContent: 'flex-end',
+        paddingVertical: 75,
+        textTransform: 'uppercase'
     },
 
-    detailsButtonText: {
-        color: '#E02041',
-        fontSize: 15,
-        fontWeight: 'bold',
+    btnAcessar: {
+        backgroundColor: '#e02041',
+        borderRadius: 8,
+        height: 50,
+        width: '48%',
+        justifyContent: 'center',
+        alignItems: 'center'
     },
+
+    icon: {
+        color: 'white',
+        fontSize: 18
+    }
 });
