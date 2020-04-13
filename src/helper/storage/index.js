@@ -2,7 +2,7 @@ import AsyncStorage from '@react-native-community/async-storage';
 
 export async function validate(key) {
     const value = await AsyncStorage.getItem(key)
-        .then(() => {alert(`Token válido !`))
+        .then(() => alert(`Token válido !`))
         .catch(e => alert(e))
     if (value !== null) {
         // value previously stored
