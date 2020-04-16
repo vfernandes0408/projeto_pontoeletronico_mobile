@@ -5,6 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 const AppStack = createStackNavigator();
 
 import Home from './screen/home';
+import Login from './screen/login';
 import CreateUser from './screen/createuser';
 import CreateCompany from './screen/createcompany';
 
@@ -14,6 +15,7 @@ export default function Routes() {
 
             <AppStack.Navigator screenOptions={{ headerShown: false }}>
                 <AppStack.Screen name="Home" component={Home} />
+                <AppStack.Screen name="Login" component={Login} />
                 <AppStack.Screen name="CreateUser" component={CreateUser} />
                 <AppStack.Screen name="CreateCompany" component={CreateCompany} />
             </AppStack.Navigator>

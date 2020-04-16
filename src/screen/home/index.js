@@ -24,6 +24,10 @@ export default function Home() {
         navigation.navigate('CreateCompany');
     }
 
+    async function login() {
+        navigation.navigate('Login');
+    }
+
     useEffect(() => {
         validateUser();
     });
@@ -39,6 +43,12 @@ export default function Home() {
                     style={styles.btnAcessar}
                     onPress={() => createAccount()}>
                     <Text style={styles.txtAcessar}>Criar Conta
+                    </Text>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    style={styles.btnAcessar}
+                    onPress={() => login()}>
+                    <Text style={styles.txtAcessar}>Login
                     </Text>
                 </TouchableOpacity>
             </View>
