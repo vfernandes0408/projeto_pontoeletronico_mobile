@@ -21,7 +21,7 @@ export default function Home() {
     }
 
     async function createAccount() {
-        navigation.navigate('CreateUser');
+        navigation.navigate('CreateCompany');
     }
 
     useEffect(() => {
